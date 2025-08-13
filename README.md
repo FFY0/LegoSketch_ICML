@@ -18,6 +18,8 @@ cd Lego/ExpCode/Lego_brick
 python Lego_seed0.py
 ```
 
+**Important Note**: For efficiency, we use a uniform random number generator as a substitute for the hash addressing during training. However, for evaluation, we provide the  CUDA kernel for the actual hash function. If you are using the Lego Sketch architecture for your own tasks, you need to confirm that this substitution, made for efficiency purposes, does not introduce errors.
+
 ## Eval Lego Sketch on Synthetic Data
 To facilitate accuracy testing, we provide synthetic datasets with different skewness levels and two Lego Brick instances (trained under random seeds 0 and 1). You can directly test them using the following command, and the results will be saved in the Figure folder.
 
@@ -26,4 +28,5 @@ cd Lego/EvalDataset
 
 python Test_Lego.py
 ```
+
 
